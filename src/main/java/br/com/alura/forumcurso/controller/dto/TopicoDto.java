@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class TopicoDto {
+
     private Long id;
     private String titulo;
     private String mensagem;
