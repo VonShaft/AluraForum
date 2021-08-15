@@ -25,20 +25,19 @@ public class Curso {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
+	public boolean equals(Object object) {
+		if (this == object)
 			return true;
-		if (obj == null)
+		if (object == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		Curso other;
+		if (object instanceof Curso) {
+			other = (Curso) object;
+		} else {
 			return false;
-		Curso other = (Curso) obj;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		return true;
+		}
+		return this.id.equals(other.id);
 	}
 
 	public Long getId() {
