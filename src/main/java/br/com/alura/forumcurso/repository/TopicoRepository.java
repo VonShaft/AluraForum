@@ -9,6 +9,8 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+
+//JpaRepository <Classe, Tipo da chave primária>
 public interface TopicoRepository extends JpaRepository<Topico, Long> {
 
     Page<Topico> findByCurso_Nome(String nomeCurso, Pageable pageable);
